@@ -51,7 +51,7 @@ jobs:
           -e OBS_PROJECT=$OBS_PROJECT \
           -e PACKAGE_NAME=$PACKAGE_NAME \
           shap/continuous_deliver \
-          /bin/bash -c "zypper -n in autoconf;cd /package;./autogen.sh;./configure;/scripts/upload.sh"
+          /bin/bash -c "zypper -n in autoconf automake;cd /package;./autogen.sh;./configure;/scripts/upload.sh"
 
     - stage: submit
       if: type != pull_request AND branch = master
