@@ -40,11 +40,7 @@ jobs:
         - PACKAGE_NAME=crmsh
 
       before_install:
-        - docker pull shap/continuous_deliver:latest
-        - |
-          docker run -t -v "$(pwd):/package" \
-          shap/continuous_deliver \
-          /bin/bash -c "zypper -n in autoconf automake" 
+        - docker pull shap/continuous_deliver:autotools 
       
       script:
         - |
