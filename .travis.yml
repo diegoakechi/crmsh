@@ -31,7 +31,7 @@ jobs:
         - sudo cat $TRAVIS_BUILD_DIR/crmtestout/regression.out $TRAVIS_BUILD_DIR/crmtestout/crm.*
 
       after_script:
-        - ./cc-test-reporter format-coverage -t coverage.py coverage.xml
+        - ./cc-test-reporter format-coverage -d -t coverage.py coverage.xml
         - ./cc-test-reporter upload-coverage
   
     - stage: delivery
