@@ -19,6 +19,7 @@ case `pwd` in
 esac
 
 coverage xml
+pip install six
 
 ls -la test/unittests
 ls -la test
