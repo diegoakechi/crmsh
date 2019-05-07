@@ -18,9 +18,10 @@ case `pwd` in
 		;;
 esac
 
+coverage xml
 
 ls -la test/unittests
 ls -la test
 ls -la `pwd`
 
-coverage xml
+
