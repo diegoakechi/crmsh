@@ -8,13 +8,13 @@ fi
 
 case `pwd` in
 	*/test/unittests)
-		PYTHONPATH=../.. $testexec --with-coverage --cover-xml -w . "$@"
+		PYTHONPATH=../.. $testexec --with-coverage --cover-xml-file=coverage.xml -w . "$@"
 		;;
 	*/test)
-		PYTHONPATH=.. $testexec --with-coverage --cover-xml -w unittests "$@"
+		PYTHONPATH=.. $testexec --with-coverage --cover-xml-file=coverage.xml -w unittests "$@"
 		;;
 	*)
-		PYTHONPATH=. $testexec --with-coverage --cover-xml -w test/unittests "$@"
+		PYTHONPATH=. $testexec --with-coverage --cover-xml-file=coverage.xml -w test/unittests "$@"
 		;;
 esac
 
@@ -22,3 +22,5 @@ esac
 ls -la test/unittests
 ls -la test
 ls -la `pwd`
+
+coverage xml
