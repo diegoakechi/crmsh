@@ -3,3 +3,4 @@ PyYAML
 nosexcover
 py-dateutil
 parallax
+coverage
