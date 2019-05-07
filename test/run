@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 if which nosetests-3.6 1>/dev/null 2>&1; then
 	testexec="nosetests-3.6"
 else
