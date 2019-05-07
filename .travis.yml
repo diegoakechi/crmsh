@@ -32,7 +32,7 @@ jobs:
 
       after_script:
         - coverage xml
-        - ./cc-test-reporter format-coverage -t coverage.py coverage.xml
+        - ./cc-test-reporter format-coverage -t coverage.py
         - ./cc-test-reporter upload-coverage
   
     - stage: delivery
