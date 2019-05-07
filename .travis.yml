@@ -25,7 +25,7 @@ jobs:
         - docker pull shap/crmsh:latest
 
       script:
-        - docker run -t -v "$(pwd):/app" shap/crmsh /bin/sh -c "systemctl start dbus; cd /app; ./test/run-in-travis.sh"
+        - docker run -t -v "$(pwd):/app" shap/crmsh /bin/sh -c "systemctl start dbus; cd /app; bash -x ./test/run-in-travis.sh"
 
       after_failure:
         - sudo cat $TRAVIS_BUILD_DIR/crmtestout/regression.out $TRAVIS_BUILD_DIR/crmtestout/crm.*
