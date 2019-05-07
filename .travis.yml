@@ -31,7 +31,8 @@ jobs:
         - sudo cat $TRAVIS_BUILD_DIR/crmtestout/regression.out $TRAVIS_BUILD_DIR/crmtestout/crm.*
 
       after_script:
-        - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+        - ./cc-test-reporter format-coverage -t coverage.py COVERAGE_FILE=./test/unittests/coverage.xml
+        - ./cc-test-reporter upload-coverage
   
     - stage: delivery
       if: type != pull_request AND branch = master
