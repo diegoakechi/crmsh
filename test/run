@@ -19,6 +19,6 @@ case `pwd` in
 esac
 
 
-ls -lh test/unittests
-ls -lh test
-ls -lh `pwd`
+ls -la test/unittests
+ls -la test
+ls -la `pwd`
