@@ -20,4 +20,5 @@ esac
 
 
 ls -lh test/unittests
+ls -lh test
 ls -lh `pwd`
