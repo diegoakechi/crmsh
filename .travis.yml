@@ -22,10 +22,10 @@ jobs:
         - ./cc-test-reporter before-build
 
       before_install:
-        - docker pull shap/crmsh:latest
+        - docker pull krig/crmsh:latest
 
       script:
-        - docker run -t -v "$(pwd):/app" shap/crmsh /bin/sh -c "systemctl start dbus; cd /app; bash -x ./test/run-in-travis.sh"
+        - docker run -t -v "$(pwd):/app" krig/crmsh /bin/sh -c "systemctl start dbus; cd /app; bash -x ./test/run-in-travis.sh"
 
       after_failure:
         - sudo cat $TRAVIS_BUILD_DIR/crmtestout/regression.out $TRAVIS_BUILD_DIR/crmtestout/crm.*
